@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/*"
-  to = "https://eqlzr-website.netlify.app/:splat"
-  status = 200
-  force = true
