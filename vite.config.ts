@@ -23,6 +23,7 @@ export default defineConfig({
     },
     allowedHosts: [
       '.eqlzr.xyz',
+      '.up.railway.app'
     ],
   },
 });
