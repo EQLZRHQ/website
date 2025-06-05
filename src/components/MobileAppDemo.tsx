@@ -133,7 +133,7 @@ const MobileAppDemo = () => {
                 href="https://app.eqlzr.xyz/"
                 className="inline-flex items-center bg-yellow-400 hover:bg-yellow-300 text-zinc-900 font-semibold px-6 py-3 rounded-md transition-colors duration-300"
               >
-                Download App
+                Launch App
               </a>
             </div>
           </div>

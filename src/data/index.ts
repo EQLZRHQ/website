@@ -4,8 +4,8 @@ import UXTwo from "../assets/UX-2.png"
 import UXThree from "../assets/UX-3.png"
 import UXFour from "../assets/UX-4.png"
 import UXFive from "../assets/UX-5.png"
-import BlogOne from "../assets/Blogpost1.png"
-import BlogTwo from "../assets/Blogpost2.png"
+import BlogOne from "../assets/Blogpost1.jpg"
+import BlogTwo from "../assets/Blogpost2.jpg"
 import { faBriefcase, faChartLine, faRecycle, faCoffee, faShuffle, faRobot, faBalanceScale, faHandshake, faCogs } from '@fortawesome/free-solid-svg-icons';
 
 // Feature data

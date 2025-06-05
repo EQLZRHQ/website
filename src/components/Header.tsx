@@ -29,11 +29,13 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center">
-            {/* <CircleDollarSign className="h-8 w-8 text-yellow-400 mr-2" /> */}
-            <img className='w-10 mx-2' src={eqlzr} alt="" />
-            <span className="text-xl font-bold text-white">EQLZR</span>
-          </div>
+          <a href="/">
+            <div className="flex items-center">
+              {/* <CircleDollarSign className="h-8 w-8 text-yellow-400 mr-2" /> */}
+              <img className='w-10 mx-2' src={eqlzr} alt="" />
+              <span className="text-xl font-bold text-white">EQLZR</span>
+            </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
