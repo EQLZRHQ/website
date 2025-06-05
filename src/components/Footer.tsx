@@ -44,16 +44,16 @@ const Footer = () => {
             Cross-chain Risk-Neutral DEX
             </p>
             <div className="flex space-x-4">
-              <a href="https://x.com/0xeqlzr" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <a href="https://x.com/0xeqlzr" target='_blank' className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <FontAwesomeIcon icon={faXTwitter} className="h-5 w-5" />
               </a>
               {/* <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <Github className="h-5 w-5" />
               </a> */}
-              <a href="https://t.me/eqlzr_global" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <a href="https://t.me/eqlzr_global" target='_blank' className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <FontAwesomeIcon icon={faTelegram} className="h-5 w-5"  />
               </a>
-              <a href="hello@eqlzr.xyz" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <a href="hello@eqlzr.xyz" target='_blank' className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
@@ -83,7 +83,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://www.papermark.com/view/cm91ad47h0003jm036siplvri" className="text-gray-400 hover:text-yellow-400 transition-colors">Whitepaper</a>
+                <a href="https://www.papermark.com/view/cm91ad47h0003jm036siplvri" target='_blank' className="text-gray-400 hover:text-yellow-400 transition-colors">Whitepaper</a>
               </li>
             </ul>
           </div>
