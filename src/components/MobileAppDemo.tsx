@@ -53,7 +53,7 @@ const MobileAppDemo = () => {
                     <img 
                       src={mobileAppSteps[currentStep - 1].image} 
                       alt={`Step ${currentStep}`} 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                     {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-zinc-900 p-4">
                       <p className="text-white font-medium text-center">

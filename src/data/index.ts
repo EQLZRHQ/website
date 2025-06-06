@@ -1,9 +1,9 @@
 import { Feature, Review, BlogPost, Step } from '../utils/types';
-import UXOne from "../assets/UX-1.png";
-import UXTwo from "../assets/UX-2.png"
-import UXThree from "../assets/UX-3.png"
-import UXFour from "../assets/UX-4.png"
-import UXFive from "../assets/UX-5.png"
+import UXOne from "../assets/1.png";
+import UXTwo from "../assets/2.png"
+import UXThree from "../assets/3.png"
+import UXFour from "../assets/4.png"
+import UXFive from "../assets/5.png"
 import BlogOne from "../assets/Blogpost1.jpg"
 import BlogTwo from "../assets/Blogpost2.jpg"
 import { faBriefcase, faChartLine, faRecycle, faCoffee, faShuffle, faRobot, faBalanceScale, faHandshake, faCogs } from '@fortawesome/free-solid-svg-icons';

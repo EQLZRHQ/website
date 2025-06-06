@@ -53,9 +53,10 @@ const Footer = () => {
               <a href="https://t.me/eqlzr_global" target='_blank' className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <FontAwesomeIcon icon={faTelegram} className="h-5 w-5"  />
               </a>
-              <a href="hello@eqlzr.xyz" target='_blank' className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <a href="mailto:hello@eqlzr.xyz" className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
+
             </div>
           </div>
 
