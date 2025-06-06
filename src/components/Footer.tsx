@@ -42,6 +42,18 @@ const Footer = () => {
             </h3>
             <p className="text-gray-400 mb-6">
             Cross-chain Risk-Neutral DEX
+              <p>
+                Introducing <span className="text-yellow-400">GasFi</span>
+              </p>
+              <p>
+                a new <span className="text-yellow-400">DeFi</span> Primitive
+              </p>
+              <p>
+                to unlock the
+              </p>
+              <p>
+                <span className="text-yellow-400">US$7 Billion</span> Blockchain Fees Market
+              </p>
             </p>
             <div className="flex space-x-4">
               <a href="https://x.com/0xeqlzr" target='_blank' className="text-gray-400 hover:text-yellow-400 transition-colors">
@@ -113,7 +125,7 @@ const Footer = () => {
                   </button>
                 </form>
                 {message && (
-                  <div className='mt-2 text-sm text-red-400'>
+                  <div className='mt-2 text-sm text-yellow-400'>
                     {message}
                   </div>
                 )}
