@@ -34,7 +34,7 @@ const MobileAppDemo = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Mobile App Screenshots */}
           <div className="relative flex justify-center">
             <div className="relative w-72 h-[600px] bg-zinc-700 rounded-[10px] shadow-2xl overflow-hidden">
@@ -89,7 +89,10 @@ const MobileAppDemo = () => {
                   expandedStep === step.id 
                     ? 'border-yellow-400 bg-yellow-400/10' 
                     : 'border-zinc-700 bg-zinc-800/50'
-                }`}
+                } ${expandedStep === step.id 
+                  ? 'block' 
+                  : 'hidden'} 
+                md:block`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: step.id * 0.1 }}
