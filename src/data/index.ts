@@ -6,6 +6,7 @@ import UXFour from "../assets/4.png"
 import UXFive from "../assets/5.png"
 import BlogOne from "../assets/Blogpost1.jpg"
 import BlogTwo from "../assets/Blogpost2.jpg"
+import BlogThree from "../assets/Blogpost3.jpg"
 import { faBriefcase, faChartLine, faRecycle, faCoffee, faShuffle, faRobot, faBalanceScale, faHandshake, faCogs } from '@fortawesome/free-solid-svg-icons';
 
 // Feature data
@@ -150,11 +151,11 @@ export const blogPosts: BlogPost[] = [
     image: BlogTwo,
     link: 'https://mirror.xyz/0x34Bb644b688b4Ab5352FAAB009fe1e0fec45b97F/LKqcyj6J3LreEiy2g1Gx6qp9EPay1mHgJDFhwgT5U0E'
   },
-  // {
-  //   id: 3,
-  //   title: 'Risk-Neutral Trading: A New Paradigm',
-  //   summary: 'Traditional DEXs suffer from impermanent loss and high slippage. Discover how risk-neutral models are changing the game.',
-  //   image: 'https://images.pexels.com/photos/7876429/pexels-photo-7876429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-  //   link: '#'
-  // }
+  {
+    id: 3,
+    title: 'Ethereum’s Pectra Upgrade: How Gas Derivatives Can Mitigate Volatility and Unlock New Opportunities',
+    summary: 'Our latest blog dives deep into the post-Pectra landscape—exploring the surge in gas fees, increased volatility, and how innovative gas derivatives (like gas futures and blob fee options) can help you hedge risks and unlock new revenue streams.',
+    image: BlogThree,
+    link: 'https://mirror.xyz/0x34Bb644b688b4Ab5352FAAB009fe1e0fec45b97F/mArsrQpjXMJAaR_kmPbe1iir7hA3mM1Ajt49Dsf9zgc'
+  }
 ];
