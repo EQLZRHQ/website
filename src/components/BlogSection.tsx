@@ -15,7 +15,7 @@ const BlogSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 w-3/4 my-0 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 w-3/3 my-0 mx-auto">
           {blogPosts.map((post, index) => (
             <motion.div
               key={post.id}
