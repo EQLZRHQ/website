@@ -7,6 +7,7 @@ import UXFive from "../assets/5.png"
 import BlogOne from "../assets/Blogpost1.jpg"
 import BlogTwo from "../assets/Blogpost2.jpg"
 import BlogThree from "../assets/Blogpost3.jpg"
+import BlogFour from "../assets/Blogpost4.jpg"
 import { faBriefcase, faChartLine, faRecycle, faCoffee, faShuffle, faRobot, faBalanceScale, faHandshake, faCogs } from '@fortawesome/free-solid-svg-icons';
 
 // Feature data
@@ -157,5 +158,12 @@ export const blogPosts: BlogPost[] = [
     summary: 'Our latest blog dives deep into the post-Pectra landscape—exploring the surge in gas fees, increased volatility, and how innovative gas derivatives (like gas futures and blob fee options) can help you hedge risks and unlock new revenue streams.',
     image: BlogThree,
     link: 'https://mirror.xyz/0x34Bb644b688b4Ab5352FAAB009fe1e0fec45b97F/mArsrQpjXMJAaR_kmPbe1iir7hA3mM1Ajt49Dsf9zgc'
+  },
+  {
+    id: 4,
+    title: 'Industry First Research: Bitcoin Fee markets & Post-Quantum BIPs',
+    summary: 'Learn how EQLZR’s GasFi Markets Can Help Bitcoin Users Navigate the Impending Rise in Fee Markets Amid Quantum-Resistant Address Migration.',
+    image: BlogFour,
+    link: 'https://mirror.xyz/0x34Bb644b688b4Ab5352FAAB009fe1e0fec45b97F/y_nXzxEUQ0PKgdJOwCxJOgv_R9nFlf75rr6SMU2UvXs'
   }
 ];
