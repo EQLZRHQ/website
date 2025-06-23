@@ -8,6 +8,7 @@ import BlogOne from "../assets/Blogpost1.jpg"
 import BlogTwo from "../assets/Blogpost2.jpg"
 import BlogThree from "../assets/Blogpost3.jpg"
 import BlogFour from "../assets/Blogpost4.jpg"
+import BlogFive from "../assets/Blogpost5.jpg"
 import { faBriefcase, faChartLine, faRecycle, faCoffee, faShuffle, faRobot, faBalanceScale, faHandshake, faCogs } from '@fortawesome/free-solid-svg-icons';
 
 // Feature data
@@ -165,5 +166,12 @@ export const blogPosts: BlogPost[] = [
     summary: 'Learn how EQLZR’s GasFi Markets Can Help Bitcoin Users Navigate the Impending Rise in Fee Markets Amid Quantum-Resistant Address Migration.',
     image: BlogFour,
     link: 'https://mirror.xyz/0x34Bb644b688b4Ab5352FAAB009fe1e0fec45b97F/y_nXzxEUQ0PKgdJOwCxJOgv_R9nFlf75rr6SMU2UvXs'
+  },
+  {
+    id: 5,
+    title: 'Lifting the Feeless Veil',
+    summary: ' Learn how EQLZR’s GasFi Can Enable the Next-Gen Feeless Stablecoin Economy on Plasma and Beyond.',
+    image: BlogFive,
+    link: 'https://mirror.xyz/0x34Bb644b688b4Ab5352FAAB009fe1e0fec45b97F/Wka4e8XnbTTtRy1gxwXLqwQewgJ02uYEvO28au2cb0U'
   }
 ];

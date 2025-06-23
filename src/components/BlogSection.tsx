@@ -1,8 +1,44 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { blogPosts } from '../data';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { FreeMode, Mousewheel } from 'swiper/modules';
 
 const BlogSection = () => {
+  const isCarousel = blogPosts.length > 4;
+
+  const BlogCard = (post, index) => (
+    <motion.div
+      key={post.id}
+      className="bg-zinc-700 rounded-xl overflow-hidden h-full flex flex-col transition-transform duration-300 hover:transform hover:scale-[1.02]"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+    >
+      <div className="h-54 overflow-hidden">
+        <img 
+          src={post.image}
+          alt={post.title}
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+        />
+      </div>
+
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="line-clamp-2 text-xl font-semibold mb-3">{post.title}</h3>
+        <p className="line-clamp-3 text-gray-300 mb-6 flex-grow">{post.summary}</p>
+        <a 
+          href={post.link} 
+          className="flex items-center text-yellow-400 font-medium hover:text-yellow-300 transition-colors mt-auto"
+        >
+          Read More <ArrowRight className="ml-2 h-4 w-4" />
+        </a>
+      </div>
+    </motion.div>
+  );
+
   return (
     <section id="blog" className="py-24 bg-zinc-800 text-white">
       <div className="container mx-auto px-4 md:px-6">
@@ -15,45 +51,29 @@ const BlogSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 w-3/3 my-0 mx-auto">
-          {blogPosts.map((post, index) => (
-            <motion.div
-              key={post.id}
-              className="bg-zinc-700 rounded-xl overflow-hidden h-full flex flex-col transition-transform duration-300 hover:transform hover:scale-[1.02]"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="h-54 overflow-hidden">
-                <img 
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold mb-3">{post.title}</h3>
-                <p className="text-gray-300 mb-6 flex-grow">{post.summary}</p>
-                <a 
-                  href={post.link} 
-                  className="flex items-center text-yellow-400 font-medium hover:text-yellow-300 transition-colors mt-auto"
-                >
-                  Read More <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* <div className="mt-12 text-center">
-          <a 
-            href="#" 
-            className="inline-flex items-center text-yellow-400 border border-yellow-400 hover:bg-yellow-400 hover:text-zinc-900 font-semibold px-6 py-3 rounded-md transition-colors duration-300"
+        {isCarousel ? (
+          <Swiper
+            modules={[FreeMode, Mousewheel]}
+            spaceBetween={24}
+            slidesPerView={'auto'}
+            freeMode={true}
+            mousewheel={true}
+            className="pb-10"
           >
-            View All Articles <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
-        </div> */}
+            {blogPosts.map((post, index) => (
+              <SwiperSlide
+                key={post.id}
+                style={{ width: '300px', height: '405px', flexShrink: 0 }}
+              >
+                {BlogCard(post, index)}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 w-3/3 my-0 mx-auto">
+            {blogPosts.map((post, index) => BlogCard(post, index))}
+          </div>
+        )}
       </div>
     </section>
   );
