@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -10,11 +10,34 @@ import { FreeMode, Mousewheel, Autoplay } from 'swiper/modules';
 
 const BlogSection = () => {
   const [blogPosts, setBlogPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('https://website-blog.eqlzr.xyz/v1/getBlogs')
-      .then(response => response.json())
-      .then(data => setBlogPosts(data.data));
+    const controller = new AbortController();
+
+    const fetchBlogs = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const response = await fetch('https://website-blog.eqlzr.xyz/v1/getBlogs', {
+          signal: controller.signal,
+        });
+        if (!response.ok) throw new Error("Failed to fetch blogs");
+        const data = await response.json();
+        setBlogPosts(data.data);
+      } catch (err: any) {
+        if (err.name !== "AbortError") {
+          setError(err.message || "Unknown error");
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogs();
+
+    return () => controller.abort();
   }, []);
 
 
@@ -32,6 +55,7 @@ const BlogSection = () => {
         <img 
           src={post.imageUrl}
           alt={post.title}
+          loading="lazy"
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
         />
       </div>
@@ -61,7 +85,15 @@ const BlogSection = () => {
           </p>
         </div>
 
-        {isCarousel ? (
+        {loading ? (
+          <div className="text-center py-10">
+            <p className="text-gray-400">Loading blogs...</p>
+          </div>
+        ) : error ? (
+          <div className="text-center py-10 text-red-400">
+            <p>{error}</p>
+          </div>
+        ) : isCarousel ? (
           <Swiper
             modules={[FreeMode, Mousewheel, Autoplay]}
             spaceBetween={24}

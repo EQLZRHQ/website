@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, CircleDollarSign } from 'lucide-react';
-import eqlzr from "../assets/EQLZR.png"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +31,7 @@ const Header = () => {
           <a href="/">
             <div className="flex items-center">
               {/* <CircleDollarSign className="h-8 w-8 text-yellow-400 mr-2" /> */}
-              <img className='w-10 mx-2' src={eqlzr} alt="" />
+              <img className='w-10 mx-2' src={"https://images.eqlzr.xyz/EQLZR.png"} alt="" />
               <span className="text-xl font-bold text-white">EQLZR</span>
             </div>
           </a>

@@ -1,14 +1,4 @@
 import { Feature, Review, BlogPost, Step } from '../utils/types';
-import UXOne from "../assets/1.png";
-import UXTwo from "../assets/2.png"
-import UXThree from "../assets/3.png"
-import UXFour from "../assets/4.png"
-import UXFive from "../assets/5.png"
-import BlogOne from "../assets/Blogpost1.jpg"
-import BlogTwo from "../assets/Blogpost2.jpg"
-import BlogThree from "../assets/Blogpost3.jpg"
-import BlogFour from "../assets/Blogpost4.jpg"
-import BlogFive from "../assets/Blogpost5.jpg"
 import { faBriefcase, faChartLine, faRecycle, faCoffee, faShuffle, faRobot, faBalanceScale, faHandshake, faCogs } from '@fortawesome/free-solid-svg-icons';
 
 // Feature data
@@ -77,31 +67,31 @@ export const mobileAppSteps: Step[] = [
     id: 1,
     title: 'Connect Wallet & Select a Round',
     description: 'Simply connect your preferred crypto wallet to access the EQLZR platform. We support MetaMask, Coinbase Wallet, WalletConnect and more.',
-    image: UXOne
+    image: "https://images.eqlzr.xyz/1.png"
   },
   {
     id: 2,
     title: 'Take a Bullish or Bearish Position',
     description: 'Analyze the gas trends, gas percentiles, bull and bear positions before you take your own Bullish or Bearish position',
-    image: UXTwo
+    image: "https://images.eqlzr.xyz/2.png"
   },
   {
     id: 3,
     title: 'Check the outcomes of your positions',
     description: 'Depending on whether you took a position on an hourly contract or a daily contract, you will soon be able to check whether you won or lost.',
-    image: UXThree
+    image: "https://images.eqlzr.xyz/3.png"
   },
   {
     id: 4,
     title: 'Compare with other traders',
     description: 'Rank yourselves among other traders based on either the number of wins or the total size of winnings across all contracts and positions.',
-    image: UXFour
+    image: "https://images.eqlzr.xyz/4.png"
   },
   {
     id: 5,
     title: 'Monitor your P&L',
     description: 'Track your performance over time with our comprehensive dashboard and analytics tools.',
-    image: UXFive
+    image: "https://images.eqlzr.xyz/5.png"
   }
 ];
 

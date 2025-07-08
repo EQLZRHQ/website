@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
-import GasFi from "../assets/gasFi.png"
 
 // Import framer-motion
 const Hero = () => {
@@ -90,7 +89,7 @@ const Hero = () => {
             <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 px-4 py-2 bg-zinc-800 rounded-full border border-yellow-400/30 text-sm text-yellow-400">
               Arbitrum
             </div> */}
-            <img src={GasFi} alt="GasFi" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl xl:max-w-xl h-auto" />
+            <img src={"https://images.eqlzr.xyz/gasFi.png"} alt="GasFi" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl xl:max-w-xl h-auto" />
           </motion.div>
         </div>
       </div>
