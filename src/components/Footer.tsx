@@ -40,7 +40,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-1 flex items-center">
               <span className="text-yellow-400 mr-2">EQLZR</span>
             </h3>
-            <p className="text-gray-400 mb-6">
+            <div className="text-gray-400 mb-6">
             Cross-chain Risk-Neutral DEX
               <p>
                 Introducing <span className="text-yellow-400">GasFi</span>
@@ -54,14 +54,11 @@ const Footer = () => {
               <p>
                 <span className="text-yellow-400">US$7 Billion</span> Blockchain Fees Market
               </p>
-            </p>
+            </div>
             <div className="flex space-x-4">
               <a href="https://x.com/0xeqlzr" target='_blank' className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <FontAwesomeIcon icon={faXTwitter} className="h-5 w-5" />
               </a>
-              {/* <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
-                <Github className="h-5 w-5" />
-              </a> */}
               <a href="https://t.me/eqlzr_global" target='_blank' className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <FontAwesomeIcon icon={faTelegram} className="h-5 w-5"  />
               </a>

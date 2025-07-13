@@ -48,6 +48,7 @@ const Reviews = () => {
                         src={reviews[currentIndex].image} 
                         alt={reviews[currentIndex].name} 
                         className="w-full h-full object-cover"
+                        loading='lazy'
                       />
                     </div>
                   </div>

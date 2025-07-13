@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, CircleDollarSign } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Menu, X, CircleDollarSign } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,14 +15,16 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header 
+    <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-zinc-900/95 backdrop-blur-sm py-4 shadow-md' : 'bg-transparent py-6'
+        isScrolled
+          ? "bg-zinc-900/95 backdrop-blur-sm py-4 shadow-md"
+          : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -31,37 +33,51 @@ const Header = () => {
           <a href="/">
             <div className="flex items-center">
               {/* <CircleDollarSign className="h-8 w-8 text-yellow-400 mr-2" /> */}
-              <img className='w-10 mx-2' src={"https://images.eqlzr.xyz/EQLZR.png"} alt="" />
+              <img
+                className="w-10 mx-2"
+                src={"https://images.eqlzr.xyz/EQLZR.png"}
+                alt=""
+                loading="lazy"
+              />
               <span className="text-xl font-bold text-white">EQLZR</span>
             </div>
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#features" className="text-gray-300 hover:text-yellow-400 transition-colors">
+            <a
+              href="#features"
+              className="text-gray-300 hover:text-yellow-400 transition-colors"
+            >
               Features
             </a>
-            <a href="#app-demo" className="text-gray-300 hover:text-yellow-400 transition-colors">
+            <a
+              href="#app-demo"
+              className="text-gray-300 hover:text-yellow-400 transition-colors"
+            >
               App Demo
             </a>
             {/* <a href="#reviews" className="text-gray-300 hover:text-yellow-400 transition-colors">
               Reviews
             </a> */}
-            <a href="#blog" className="text-gray-300 hover:text-yellow-400 transition-colors">
+            <a
+              href="#blog"
+              className="text-gray-300 hover:text-yellow-400 transition-colors"
+            >
               Blog
             </a>
           </nav>
 
           {/* CTA Button */}
-          <a 
-            href="https://app.eqlzr.xyz/" 
+          <a
+            href="https://app.eqlzr.xyz/"
             className="hidden md:inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-6 py-2 rounded-md transition-colors duration-300"
           >
             Launch App
           </a>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -73,35 +89,35 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 bg-zinc-800 p-4 rounded-md">
             <nav className="flex flex-col space-y-4">
-              <a 
-                href="#features" 
+              <a
+                href="#features"
                 className="text-gray-300 hover:text-yellow-400 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </a>
-              <a 
-                href="#app-demo" 
+              <a
+                href="#app-demo"
                 className="text-gray-300 hover:text-yellow-400 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 App Demo
               </a>
-              <a 
-                href="#reviews" 
+              <a
+                href="#reviews"
                 className="text-gray-300 hover:text-yellow-400 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Reviews
               </a>
-              <a 
-                href="#blog" 
+              <a
+                href="#blog"
                 className="text-gray-300 hover:text-yellow-400 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
               </a>
-              <a 
+              <a
                 href="https://app.eqlzr.xyz/"
                 className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-4 py-2 rounded-md transition-colors duration-300 inline-block"
               >
