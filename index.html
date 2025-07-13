@@ -6,8 +6,31 @@
     <link rel="icon" href="/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EQLZR - Cross-chain Risk-Neutral DEX</title>
+    
+    <!-- Performance optimizations with Cloudflare CDN -->
     <link rel="preconnect" href="https://website-blog.eqlzr.xyz" />
     <link rel="preconnect" href="https://images.eqlzr.xyz" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <!-- Cloudflare CDN optimizations -->
+    <link rel="dns-prefetch" href="https://imagedelivery.net" />
+    <link rel="preconnect" href="https://imagedelivery.net" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/main.tsx" as="script" />
+    <link rel="preload" href="/src/index.css" as="style" />
+    
+    <!-- Meta tags for better performance -->
+    <meta name="description" content="EQLZR - Cross-chain Risk-Neutral DEX for seamless trading across multiple blockchains" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Security headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
   </head>
   <body>
     <div id="root"></div>

@@ -1,0 +1,116 @@
+{
+  "cloudflare_optimizations": {
+    "description": "Cloudflare CDN optimization settings for EQLZR website",
+    "recommended_settings": {
+      "caching": {
+        "browser_cache_ttl": "1 year",
+        "edge_cache_ttl": "1 year",
+        "cache_by_device_type": true,
+        "cache_by_country": true
+      },
+      "compression": {
+        "brotli": true,
+        "gzip": true,
+        "minify": {
+          "css": true,
+          "html": true,
+          "js": true
+        }
+      },
+      "security": {
+        "ssl": "Full (strict)",
+        "security_level": "High",
+        "waf": "On",
+        "bot_fight_mode": "On"
+      },
+      "performance": {
+        "auto_minify": {
+          "css": true,
+          "html": true,
+          "js": true
+        },
+        "rocket_loader": true,
+        "early_hints": true,
+        "http3": true,
+        "0rtt": true
+      },
+      "images": {
+        "image_resizing": true,
+        "webp_auto": true,
+        "avif_auto": true,
+        "image_optimization": "Lossy"
+      }
+    },
+    "page_rules": [
+      {
+        "name": "Static Assets Cache",
+        "url": "*.eqlzr.xyz/*.js",
+        "settings": {
+          "cache_level": "Cache Everything",
+          "edge_cache_ttl": "1 year",
+          "browser_cache_ttl": "1 year"
+        }
+      },
+      {
+        "name": "CSS Files Cache",
+        "url": "*.eqlzr.xyz/*.css",
+        "settings": {
+          "cache_level": "Cache Everything",
+          "edge_cache_ttl": "1 year",
+          "browser_cache_ttl": "1 year"
+        }
+      },
+      {
+        "name": "Image Optimization",
+        "url": "*.eqlzr.xyz/images/*",
+        "settings": {
+          "cache_level": "Cache Everything",
+          "edge_cache_ttl": "1 year",
+          "browser_cache_ttl": "1 year",
+          "image_resizing": "On"
+        }
+      },
+      {
+        "name": "Font Files Cache",
+        "url": "*.eqlzr.xyz/fonts/*",
+        "settings": {
+          "cache_level": "Cache Everything",
+          "edge_cache_ttl": "1 year",
+          "browser_cache_ttl": "1 year"
+        }
+      }
+    ],
+    "worker_script": {
+      "description": "Cloudflare Worker for additional optimizations",
+      "code": "addEventListener('fetch', event => {\n  event.respondWith(handleRequest(event.request))\n})\n\nasync function handleRequest(request) {\n  let response = await fetch(request)\n  let newHeaders = new Headers(response.headers)\n  \n  newHeaders.set('X-Content-Type-Options', 'nosniff')\n  newHeaders.set('X-Frame-Options', 'SAMEORIGIN')\n  newHeaders.set('X-XSS-Protection', '1; mode=block')\n  newHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin')\n  newHeaders.set('X-DNS-Prefetch-Control', 'on')\n  \n  if (request.url.match(/\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webp|avif)$/)) {\n    newHeaders.set('Cache-Control', 'public, max-age=31536000, immutable')\n  }\n  \n  return new Response(response.body, {\n    status: response.status,\n    statusText: response.statusText,\n    headers: newHeaders\n  })\n}"
+    }
+  },
+  "deployment_checklist": [
+    "Enable Auto Minify for CSS, HTML, and JS",
+    "Enable Brotli compression",
+    "Set up Page Rules for caching",
+    "Enable HTTP/3 and 0-RTT",
+    "Configure Image Resizing",
+    "Enable Early Hints",
+    "Set up Rocket Loader",
+    "Configure WAF rules",
+    "Enable Bot Fight Mode",
+    "Set SSL/TLS to Full (strict)"
+  ],
+  "monitoring": {
+    "metrics_to_track": [
+      "Cache hit ratio",
+      "Origin response time",
+      "Edge response time",
+      "Bandwidth savings",
+      "Request count by country",
+      "Security events"
+    ],
+    "alerts": [
+      "High error rate",
+      "Low cache hit ratio",
+      "High origin response time",
+      "Security threats detected"
+    ]
+  }
+} 
