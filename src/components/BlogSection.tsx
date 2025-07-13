@@ -55,7 +55,6 @@ const BlogSection = () => {
         <img 
           src={post.imageUrl}
           alt={post.title}
-          loading="lazy"
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
         />
       </div>
