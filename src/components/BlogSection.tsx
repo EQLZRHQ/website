@@ -63,7 +63,7 @@ const BlogSection = () => {
         <h3 className="line-clamp-2 text-xl font-semibold mb-3">{post.title}</h3>
         <p className="line-clamp-3 text-gray-300 mb-6 flex-grow">{post.description}</p>
         <a 
-          href={post.blogUrl} 
+          href={post.blogUrl} target='_blank'
           className="flex items-center text-yellow-400 font-medium hover:text-yellow-300 transition-colors mt-auto"
         >
           Read More <ArrowRight className="ml-2 h-4 w-4" />
