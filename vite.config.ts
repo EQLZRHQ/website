@@ -99,7 +99,6 @@ export default defineConfig({
     reportCompressedSize: true,
   },
   optimizeDeps: {
-    exclude: ['lucide-react'],
     include: [
       'react', 
       'react-dom', 
@@ -107,7 +106,8 @@ export default defineConfig({
       '@fortawesome/fontawesome-svg-core',
       '@fortawesome/react-fontawesome',
       'framer-motion',
-      '@supabase/supabase-js'
+      '@supabase/supabase-js',
+      'lucide-react'
     ],
     esbuildOptions: {
       target: 'esnext',
